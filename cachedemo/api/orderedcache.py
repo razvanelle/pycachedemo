@@ -38,7 +38,6 @@ class OrderedCache:
 
   @guard
   def put(self, id, timeStamp):
-    print('===>Cache put: ', id, ' t=', timeStamp)
     # set the new element (insert if new)
     self.cache[id] = timeStamp
     self.cache.move_to_end(id)
@@ -47,19 +46,16 @@ class OrderedCache:
 
   @guard
   def getupdates(self, refTime):
-    print('===>Cache get updates: REF=', refTime, ' @ctime=', self.getTimeStr())
     refTime = str(refTime)
     res = {} # search newer items in reverse
     for key in list(self.cache)[::-1]:
       if self.cache[key] > refTime:
-        print('----found: ', key, '-', self.cache[key])
         res[key] = self.cache[key]
       else:
         break
     
     self.clean()
     self.state()
-    print('----returning:', res)
     return res
 
   def clean(self):
@@ -68,7 +64,6 @@ class OrderedCache:
     # Iterate from start to delete expired items. Ordered by time.
     for key in list(self.cache):
       if self.cache[key] < expireTime:
-        print('CAche Remove: ', self.cache[key], ' < ', expireTime)
         del self.cache[key]
       else:
         break

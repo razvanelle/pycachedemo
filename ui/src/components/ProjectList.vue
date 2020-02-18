@@ -4,7 +4,12 @@
       <h1>Projects: </h1>
       <div class="spacer"></div>
       <div class="hitem">
-        <input class="warn" type="submit" @click="autoUpdate=!autoUpdate" :value="updateStatus">
+        <!-- <input class="warn" type="submit" @click="autoUpdate=!autoUpdate" :value="updateStatus"> -->
+        <button class="buttonload" @click="autoUpdate=!autoUpdate">
+          Loading
+          <i class="fa fa-spinner fa-spin" v-if="autoUpdate"></i>
+          <span v-else> OFF</span>
+        </button>            
       </div>
     </div>
     <ul class="projectlist">

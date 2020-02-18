@@ -55,6 +55,23 @@ h1 {
   color: white;
 }
 
+.buttonload {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 24px; /* Some padding */
+  font-size: 16px; /* Set a font-size */
+  border-radius: 4px;
+}
+
+.buttonload:hover {
+  background-color: #1b5520;
+}
+
+
+.fa {
+  margin: 0px 4px;
+}
 .hcontainer {
   display: flex;
   flex-direction: row;

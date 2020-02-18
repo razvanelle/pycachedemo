@@ -19,7 +19,7 @@
         <div class="spacer"></div>
 
         <div class="hitem">
-          <input type="submit" id="psubmit" name="submit" value="Submit" @click.prevent="submit">
+          <input type="submit" id="psubmit" name="submit" value="Submit" @click.prevent="submit">      
         </div>
       </div>
     </form>
