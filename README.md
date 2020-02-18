@@ -38,7 +38,7 @@ In `views.py` you can see besides the standard ViewSet, another function view `u
 ... more explanations to follow ...
 
 ## Install and run
-Assumes python 3 installed correctly 
+Assumes python 3 and node/npm installed correctly 
 1. Get this repo locally (clone or unzip)
 
 2. CD into base dir, create venv and run DRF server
