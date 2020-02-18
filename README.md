@@ -48,8 +48,6 @@ virtualenv venv
 python3 -m venv venv
 
 pip install -r requirements.txt
-py manage.py makemigrations
-py manage.py migrate
 py manage.py runserver
 ```
 !!! make sure that server is listening to `http://127.0.0.1:8000/`, otherwise update the baseURI in `ui/store/index.js` accordingly.
