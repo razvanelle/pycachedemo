@@ -18,6 +18,9 @@ The client can request changes since last time the cache was queried, so we can 
 The response contains the id's of the projects that have changed in the mean time. The client will then query only these projects.
 If the cache is not old enough the client can run a full query.
 
+![CacheDemo](cachedemo.jpg)
+
+
 Future changes/ideas:
 - add the projects to the cache, so that no extra query is needed
 - make it multiprocess safe
