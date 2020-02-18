@@ -30,16 +30,23 @@ Future changes/ideas:
 
 ## How does it work
 Django uses the cache in the way explained above.
+
 In `models.py` we use signals to listen to changes.
+
 In `views.py` you can see besides the standard ViewSet, another function view `update()` that responds to requests.
+
 ... more explanations to follow ...
 
 ## Install and run
-
+Assumes python 3 installed correctly 
 1. Get this repo locally (clone or unzip)
 
-2. CD into base dir and run DRF server
+2. CD into base dir, create venv and run DRF server
 ```
+virtualenv venv
+  or 
+python3 -m venv venv
+
 pip install -r requirements.txt
 py manage.py makemigrations
 py manage.py migrate
@@ -53,6 +60,9 @@ npm install
 npm run serve
 ```
 4. Visit VUE server link, usually `http://localhost:8080/`
+
 Open in 2 browsers side by side, to see the magic happen.
+
 Click "Load" button on both instances, it should animate.
+
 Make changes on either side, the changes should propagate to the other side in few seconds.
