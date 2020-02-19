@@ -1,6 +1,6 @@
 # What is this wizardry?
 
-This project is a prototype for my Django "project cache" that I implemented for a business client in order to have almost real time 
+This project is a prototype for my Django "project cache" that I implemented for a business client in order to have "almost" real time 
 content updates (similar to FireStore but polling the data instead pushing). I looked for some similar implementation 
 but couldn't find something that worked for me, so here we are.
 
@@ -10,7 +10,7 @@ I have plans to extend it into a stand-alone package, but ... later, when I'll h
 I'll add a tutorial for this on my website soon(tm)
 
 ## What does it do:
-* It **creates a "cache"** that is order by access and has expiry time.
+* It **creates a "cache"** that is ordered by access and has expiry time.
 * It "listens" to changes on specific Opbject types (Projects) and whenever a client change is intercepted the Object is added to top of the cache.
 * If the object was already in the cache it is moved to top of the queue.
 
